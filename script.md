@@ -59,4 +59,8 @@ Along with whatever your npm publishing process is for JavaScript e.g. I'll crea
 npm version patch && git push --follow-tags && npm publish
 ```
 
-Using such pacakges is super easy.
+Using such packages is super easy. We can simply copy the whole project into another folder, to save us setting up TypeScript and npm pacakge settings.
+
+```
+cp demo-ts demo-ts-use
+```
