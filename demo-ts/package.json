@@ -7,8 +7,7 @@
   "typings": "lib/index",
   "scripts": {
     "build": "tsc -p .",
-    "preversion": "npm run build",
-    "postversion": "git push --follow-tags && npm publish",
+    "preversion": "npm run build"
   },
   "keywords": [],
   "author": "",

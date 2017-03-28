@@ -59,8 +59,33 @@ Along with whatever your npm publishing process is for JavaScript e.g. I'll crea
 npm version patch && git push --follow-tags && npm publish
 ```
 
-Using such packages is super easy. We can simply copy the whole project into another folder, to save us setting up TypeScript and npm pacakge settings.
+* Using such packages is super easy. To save us setting up project, we can simply copy the whole project into another folder.
+```
+cp -R demo-ts demo-ts-use
+```
+* We will go into this new project
+```
+cd demo-ts-use
+```
+* And install our newly published TS package as a dependency. 
+```
+npm install demo-ts -S
+```
+* Now we can simply use this in our application 
+```js
+import { sum } from "demo-ts";
+```
+* Notice the 100% reliable package name import 
+* Along with the export member name import 
+* We also get nice type checking for using the function e.g. `sum(1, 2)` works but `sum(1, 'hello')` complains
 
+```js
+sum(1, 2);
 ```
-cp demo-ts demo-ts-use
+And the result is also type checked for us (hover over result).
+
+```js
+const result = sum(1, 2);
 ```
+
+Using JavaScript packages written in TypeScript can save you a lot of time digging around docs and then having to memorize them in order to use the package correctly.
