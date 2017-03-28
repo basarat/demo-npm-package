@@ -1,19 +1,19 @@
 {
-  "name": "demo",
+  "name": "demo-ts",
   "version": "0.0.0",
-  "description": "demo",
+  "description": "demo-ts",
   "repository": "https://twitter.com/basarat",
-  "main": "lib/index.js",
-  "typings": "lib",
+  "main": "lib/index",
+  "typings": "lib/index",
   "scripts": {
     "build": "tsc -p .",
-    "resume": "git add . && git commit -m 'push' && git pull --rebase && git push"
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags && npm publish",
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^7.0.10",
     "typescript": "^2.1.4"
   }
 }
