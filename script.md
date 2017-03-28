@@ -103,4 +103,4 @@ And the result is also type checked for us (hover over result).
 const result = sum(1, 2);
 ```
 
-Using JavaScript packages written in TypeScript can save you a lot of time digging around docs and then having to memorize them in order to use the package correctly.
+Using JavaScript packages written in TypeScript can save you a lot of time digging around docs and then having to memorize the docs, in order to call the functions with the right spellings. This frees you up for a higher level of thinking and reasoning about logic and business requirements.
