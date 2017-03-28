@@ -84,7 +84,7 @@ pack.sum(1, 3);
 
 So by creating a package using TypeScript you are not limiting your target audience in any way. 
 
-The value of TypeScript shines even brighter when your users use TypeScript.
+A package written in TypeScript shines even brighter for people that use TypeScript.
 
 * Lets import our package as a TypeScript user.
 ```js
