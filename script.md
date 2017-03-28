@@ -59,7 +59,7 @@ Along with whatever your npm publishing process is for JavaScript e.g. I'll crea
 npm version patch && git push --follow-tags && npm publish
 ```
 
-* Using such packages is super easy. To save us setting up project, we can simply copy the whole project into another folder.
+* Using such packages is super easy. To save us time setting up project, we can simply copy the whole project into another folder.
 ```
 cp -R demo-ts demo-ts-use
 ```
@@ -71,7 +71,22 @@ cd demo-ts-use
 ```
 npm install demo-ts -S
 ```
-* Now we can simply use this in our application 
+
+Now to use our package we don't actually need TypeScript e.g.
+```
+node 
+const pack = require('demo-ts');
+pack.sum(1, 3);
+```
+* We can jump to the node console. 
+* Require the package.
+* and use its exported members.
+
+So by creating a package using TypeScript you are not limiting your target audience in any way. 
+
+The value of TypeScript shines even brighter when your users use TypeScript.
+
+* Lets import our package as a TypeScript user.
 ```js
 import { sum } from "demo-ts";
 ```
