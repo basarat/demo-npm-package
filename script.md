@@ -37,6 +37,9 @@ Now lets write some source code:
 We will export a simple `sum` function that takes two numbers and returns their sum
 
 ```js
+/**
+ * Sums two numbers
+ */
 export function sum(a: number, b: number) {
   return a + b;
 }
@@ -60,16 +63,10 @@ Along with whatever your npm publishing process is for JavaScript e.g. I'll crea
 npm version patch && git push --follow-tags && npm publish
 ```
 
-* Using such packages is super easy. To save us time setting up project, we can simply copy the whole project into another folder.
+* Using such packages is super easy. We simply jump to another TypeScript package
 
 ```
-cp -R demo-ts demo-ts-use
-```
-
-* We will go into this new project
-
-```
-cd demo-ts-use
+cd ../demo-ts-use
 ```
 
 * And install our newly published TS package as a dependency.
@@ -78,7 +75,8 @@ cd demo-ts-use
 npm install demo-ts -S
 ```
 
-Now to use our package we don't actually need TypeScript e.g.
+Note that to use our package we don't actually need TypeScript e.g.
+
 ```
 node
 const pack = require('demo-ts');
@@ -90,8 +88,9 @@ pack.sum(1, 3);
 
 So by creating a package using TypeScript you are not limiting your target audience in any way.
 
-A package written in TypeScript shines even brighter for people that use TypeScript.
+That said a package written in TypeScript shines even brighter for people that use TypeScript.
 
+* Lets jump to our IDE and open a TypeScript file.
 * Lets import our package as a TypeScript user.
 ```js
 import { sum } from "demo-ts";
@@ -103,7 +102,8 @@ import { sum } from "demo-ts";
 ```js
 sum(1, 2);
 ```
-And the result is also type checked for us (hover over result).
+And the result is also type checked for us
+### **(hover over result)**
 
 ```js
 const result = sum(1, 2);
