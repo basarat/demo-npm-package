@@ -73,6 +73,7 @@ cd demo-ts-use
 ```
 
 * And install our newly published TS package as a dependency.
+
 ```
 npm install demo-ts -S
 ```

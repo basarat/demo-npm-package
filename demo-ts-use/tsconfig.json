@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "declaration": true,
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}
