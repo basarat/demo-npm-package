@@ -31,7 +31,7 @@ We will also go ahead and create a tsconfig.json file for TypeScript configurati
 * we will output all the js and declaration files to the `lib` folder
 * finally we include all the files from `src` directory.
 
-Now lets write some source code: 
+Now lets write some source code:
 * We will create an `src/index.ts`
 
 We will export a simple `sum` function that takes two numbers and returns their sum
@@ -48,11 +48,12 @@ Now to compile this package we will add a build script to our package.json.
 ```
 * A `build` target to compile TypeScript to JavaScript using our tsconfig.json.
 
-Now on the command line you just invoke this target `npm run build` 
+Now on the command line you just invoke this target `npm run build`
 
 ```sh
 npm run build
 ```
+
 Along with whatever your npm publishing process is for JavaScript e.g. I'll create a package release, push the tag upstream and then publish it on npm.
 
 ```sh
@@ -60,29 +61,33 @@ npm version patch && git push --follow-tags && npm publish
 ```
 
 * Using such packages is super easy. To save us time setting up project, we can simply copy the whole project into another folder.
+
 ```
 cp -R demo-ts demo-ts-use
 ```
+
 * We will go into this new project
+
 ```
 cd demo-ts-use
 ```
-* And install our newly published TS package as a dependency. 
+
+* And install our newly published TS package as a dependency.
 ```
 npm install demo-ts -S
 ```
 
 Now to use our package we don't actually need TypeScript e.g.
 ```
-node 
+node
 const pack = require('demo-ts');
 pack.sum(1, 3);
 ```
-* We can jump to the node console. 
+* We can jump to the node console.
 * Require the package.
 * and use its exported members.
 
-So by creating a package using TypeScript you are not limiting your target audience in any way. 
+So by creating a package using TypeScript you are not limiting your target audience in any way.
 
 A package written in TypeScript shines even brighter for people that use TypeScript.
 
@@ -90,8 +95,8 @@ A package written in TypeScript shines even brighter for people that use TypeScr
 ```js
 import { sum } from "demo-ts";
 ```
-* Notice the 100% reliable package name import 
-* Along with the export member name import 
+* Notice the 100% reliable package name import
+* Along with the export member name import
 * We also get nice type checking for using the function e.g. `sum(1, 2)` works but `sum(1, 'hello')` complains
 
 ```js
