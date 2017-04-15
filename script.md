@@ -1,4 +1,4 @@
-# Creating node packages using TypeScript
+# Creating high quality node packages using TypeScript
 > The TypeScript compiler makes it super easy to create high quality NodeJS packages that can be used with compile time safety in other TypeScript packages.
 
 > Using JavaScript packages written in TypeScript can save you a lot of time digging around docs and then having to memorize the docs, in order to call the functions with the right spellings. This frees you up for a higher level of thinking and reasoning about logic and business requirements.
