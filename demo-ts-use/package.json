@@ -14,5 +14,8 @@
   "license": "MIT",
   "devDependencies": {
     "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "demo-ts": "^1.0.3"
   }
 }
