@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "demo-ts-use/package.json",
+        "demo-ts/package.json"
+      ]
+    }
+  }
+}
